@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dycbnbpcwc2l4"
+path="res://.godot/imported/sfx_gem.ogg-d748cc7346bc3925dd8ac1adb1583c28.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/2D Resources/2D Resources/sounds/sfx_gem.ogg"
+dest_files=["res://.godot/imported/sfx_gem.ogg-d748cc7346bc3925dd8ac1adb1583c28.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
