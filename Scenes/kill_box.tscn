@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://de4oosa52v50y"]
+
+[ext_resource type="Script" uid="uid://tfi53rkw601m" path="res://kill_box.gd" id="1_okvdv"]
+
+[node name="KillBox" type="Area2D" unique_id=1802971630]
+script = ExtResource("1_okvdv")
+
+[node name="KBTimer" type="Timer" parent="." unique_id=480545610]
+one_shot = true
+ignore_time_scale = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="KBTimer" to="." method="_on_kb_timer_timeout"]
