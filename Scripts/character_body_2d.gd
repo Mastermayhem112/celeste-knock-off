@@ -98,10 +98,12 @@ func _physics_process(delta: float) -> void:
 		# Wall Cling
 		if Input.is_action_pressed("playerCling") and canCling == true:
 			clingTime += 1
-			if velocity.y > 0:
+			if velocity.y >= 0:
 				isCling = true
 				velocity.y = 0
 				jumpTimer = 0     # Reset for variable jump height
+			else:
+				isCling = false
 		else:
 			isCling = false
 		
