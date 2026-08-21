@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dl8a8j2hr110j"]
+
+[ext_resource type="Texture2D" uid="uid://bagcqa8wdttkm" path="res://nature.jpg" id="1_28flt"]
+[ext_resource type="Script" uid="uid://5wap8q4eovc0" path="res://Scenes/main_menu.gd" id="1_48xlc"]
+
+[sub_resource type="Theme" id="Theme_1ehe0"]
+Label/colors/font_color = Color(0.20127639, 0.07645828, 0.8151001, 1)
+Label/font_sizes/font_size = 90
+
+[node name="main_menu" type="CanvasLayer" unique_id=10618688]
+script = ExtResource("1_48xlc")
+
+[node name="control" type="Control" parent="." unique_id=133809522]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="control" unique_id=338000814]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_28flt")
+
+[node name="ColorRect" type="ColorRect" parent="control" unique_id=493754467]
+layout_mode = 1
+offset_left = 410.0
+offset_top = 207.0
+offset_right = 789.0
+offset_bottom = 420.0
+color = Color(0, 0, 0, 0.78431374)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="control/ColorRect" unique_id=1466623478]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.008
+offset_left = 32.0
+offset_right = -37.0
+offset_bottom = -1.8079987
+
+[node name="Play" type="Button" parent="control/ColorRect/VBoxContainer" unique_id=866016860]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Play"
+
+[node name="Quit" type="Button" parent="control/ColorRect/VBoxContainer" unique_id=119839071]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Quit
+"
+
+[node name="Label" type="Label" parent="control" unique_id=1063279122]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 427.0
+offset_top = 5.0
+offset_right = 723.0
+offset_bottom = 142.0
+grow_horizontal = 2
+theme = SubResource("Theme_1ehe0")
+theme_type_variation = &"HeaderLarge"
+text = "EBB"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="control/ColorRect/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="control/ColorRect/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

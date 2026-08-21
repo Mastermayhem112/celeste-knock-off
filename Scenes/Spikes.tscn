@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://sseb1ftodw24"]
+
+[ext_resource type="Texture2D" uid="uid://ie7vp45873pk" path="res://Spikes.png" id="1_nh0ne"]
+[ext_resource type="Script" uid="uid://tfi53rkw601m" path="res://Scripts/kill_box.gd" id="2_eawer"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t4tuj"]
+radius = 3.0
+height = 20.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dfn2k"]
+radius = 3.0
+height = 20.0
+
+[node name="Spikes" type="Area2D" unique_id=144093665]
+script = ExtResource("2_eawer")
+
+[node name="Area2D" type="Sprite2D" parent="." unique_id=1337953161]
+texture = ExtResource("1_nh0ne")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=1633511545]
+position = Vector2(23.5, 22)
+shape = SubResource("CapsuleShape2D_t4tuj")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=433998394]
+position = Vector2(7.5, 22)
+shape = SubResource("CapsuleShape2D_t4tuj")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1775004303]
+position = Vector2(-8.5, 22)
+shape = SubResource("CapsuleShape2D_dfn2k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=793230905]
+position = Vector2(-24.5, 22)
+shape = SubResource("CapsuleShape2D_dfn2k")
+
+[node name="KBTimer" type="Timer" parent="." unique_id=462630562]
+one_shot = true
+ignore_time_scale = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="KBTimer" to="." method="_on_kb_timer_timeout"]

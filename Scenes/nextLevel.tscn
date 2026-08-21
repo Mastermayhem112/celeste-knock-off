@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bvffuacefx2x8"]
+
+[ext_resource type="Script" uid="uid://bpo24p3ecrmjh" path="res://Scenes/next_level.gd" id="1_gid2i"]
+[ext_resource type="Texture2D" uid="uid://c3wmrifbueaw8" path="res://Assets/2D Resources/2D Resources/tilesets/props.png" id="1_hofjo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ro8s"]
+size = Vector2(22, 33)
+
+[node name="Node2D" type="Area2D" unique_id=1171607355]
+script = ExtResource("1_gid2i")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=479285685]
+position = Vector2(0.5, 0)
+rotation = -3.1415927
+scale = Vector2(1, -1)
+texture = ExtResource("1_hofjo")
+region_enabled = true
+region_rect = Rect2(318, 20, 87, 108)
+
+[node name="doorway" type="CollisionShape2D" parent="." unique_id=461684772]
+position = Vector2(10, 37.5)
+shape = SubResource("RectangleShape2D_4ro8s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

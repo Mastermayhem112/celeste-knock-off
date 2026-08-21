@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cksdqgshgtg32"]
+
+[ext_resource type="AudioStream" uid="uid://sf6wybe5so4a" path="res://Assets/2D Resources/Lena_Raine_-_Quiet_and_Falling_(mp3.pm).mp3" id="1_fbmny"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=920838645]
+stream = ExtResource("1_fbmny")
+volume_db = -16.0
+autoplay = true
+parameters/looping = true
