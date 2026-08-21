@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://c6ujdavy7r0va" path="res://Scripts/arrow.gd" id="5_tqiex"]
 [ext_resource type="PackedScene" uid="uid://sseb1ftodw24" path="res://Scenes/Spikes.tscn" id="8_tqiex"]
 [ext_resource type="PackedScene" uid="uid://bvffuacefx2x8" path="res://Scenes/nextLevel.tscn" id="9_ha3dl"]
+[ext_resource type="FontFile" uid="uid://c3kw1iybn1fbh" path="res://Assets/2D Resources/2D Resources/fonts/PixelOperator8.ttf" id="10_f3gli"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f3gli"]
 texture = ExtResource("2_ikcpc")
@@ -170,31 +171,10 @@ sources/2 = SubResource("TileSetAtlasSource_6l6h0")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qbrl8"]
 distance = -30.0
 
-[sub_resource type="FontFile" id="FontFile_ha3dl"]
-cache/0/variation_coordinates = {}
-cache/0/face_index = 0
-cache/0/embolden = 0.0
-cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
-cache/0/spacing_top = 0
-cache/0/spacing_bottom = 0
-cache/0/spacing_space = 0
-cache/0/spacing_glyph = 0
-cache/0/baseline_offset = 0.0
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/21/0/ascent = 0.0
-cache/0/21/0/descent = 0.0
-cache/0/21/0/underline_position = 0.0
-cache/0/21/0/underline_thickness = 0.0
-cache/0/21/0/scale = 1.0
-
 [sub_resource type="Theme" id="Theme_f3gli"]
-default_font = SubResource("FontFile_ha3dl")
+default_font = ExtResource("10_f3gli")
 Label/colors/font_color = Color(0, 0, 0, 1)
-Label/fonts/font = SubResource("FontFile_ha3dl")
+Label/fonts/font = ExtResource("10_f3gli")
 
 [node name="Main Level" type="Node2D" unique_id=533500941]
 
@@ -317,10 +297,10 @@ rotation = 1.5707964
 scale = Vector2(0.25, 0.25)
 
 [node name="Label" type="Label" parent="." unique_id=965997849]
-offset_left = 140.0
-offset_top = -121.0
-offset_right = 256.0
-offset_bottom = -20.0
+offset_left = 126.0
+offset_top = -100.0
+offset_right = 248.0
+offset_bottom = 1.0
 theme = SubResource("Theme_f3gli")
 theme_override_font_sizes/font_size = 16
 text = "Press:
